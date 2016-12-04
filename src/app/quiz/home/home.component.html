@@ -1,0 +1,11 @@
+<div class="container-fluid">
+
+  <div *ngIf=" sessionSrvc.sessionData">
+    <app-question-list></app-question-list>
+  </div>
+
+  <div *ngIf="! sessionSrvc.sessionData">
+    <app-quiztest-home></app-quiztest-home>
+  </div>
+  
+</div>
