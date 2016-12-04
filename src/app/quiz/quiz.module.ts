@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RoutesModule } from './app-routes';
-import { CommonModule } from '@angular/common'
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
@@ -47,18 +46,6 @@ import { QuiztestFinalComponent } from './quiz/quiztest/quiztest-final/quiztest-
     NgbModule.forRoot()
   ],
   providers: [ AuthsessionService, User, Quiz ],
-  exports: [
-    AppComponent,
-    LayoutComponent,
-    AuthenticationComponent,
-    HomeComponent,
-    RegistrationComponent,
-    QuiztestComponent,
-    QuizbuilderComponent,
-    QuestionListComponent,
-    QuizChoicesComponent,
-    QuiztestHomeComponent,
-    QuiztestFinalComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class QuizModule { }
